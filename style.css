@@ -1,0 +1,40 @@
+/*general styles*/
+:root {
+    --font: "Rubik", sans-serif;
+    --font-color: hsl(220, 100%, 5%);
+    --bg-color: hsl(200, 70%, 60%);
+    font-family: var(--font);
+    color: var(--font-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+/*navigation header style*/
+nav {
+    width: 95%;
+    min-width: 300px;
+    background-color: var(--bg-color);
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+nav ul li {
+    list-style: none;
+    flex-grow: 1;
+}
+
+nav ul li:nth-child(2) {
+    border-left: 2px solid var(--font-color);
+    border-right: 2px solid var(--font-color);
+    margin: 0 -2px 0 -2px;
+}
