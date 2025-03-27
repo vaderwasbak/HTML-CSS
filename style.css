@@ -3,8 +3,18 @@
     --font: "Rubik", sans-serif;
     --font-color: hsl(220, 100%, 5%);
     --bg-color: hsl(200, 70%, 60%);
+    --title-shadow: 0.1rem 0.1rem 0.5rem hsl(200, 15%, 55%);
     font-family: var(--font);
     color: var(--font-color);
+}
+
+.paragraph {
+    --font: "Inter", sans-serif;
+}
+
+body {
+    padding: 1.5vw;
+    margin: 0;
 }
 
 a {
@@ -14,18 +24,23 @@ a {
     font-size: 0.8rem;
 }
 
+a:hover {
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.3rem hsl(200, 50%, 40%);
+}
+
 /*navigation header style*/
 nav {
-    width: 95%;
     min-width: 300px;
     background-color: var(--bg-color);
-    margin: 0 auto;
+    margin: 0 auto 2rem;
 }
 
 nav ul {
     display: flex;
     padding: 0.5rem 0;
     text-align: center;
+    margin: 0;
 }
 
 nav ul li {
@@ -38,3 +53,110 @@ nav ul li:nth-child(2) {
     border-right: 2px solid var(--font-color);
     margin: 0 -2px 0 -2px;
 }
+
+/*main article style*/
+
+main article {
+    margin-bottom: 2rem;
+}
+
+main article h1 {
+    text-shadow: var(--title-shadow);
+    font-size: 1.4rem;
+}
+
+.paragraph {
+    font-family: var(--font);
+    font-size: 0.8rem;
+}
+
+/*photo's section style*/
+
+main section {
+    margin-bottom: 2rem;
+}
+
+main section:nth-child(2) {
+    border-bottom: 2px solid black;
+    border-image: linear-gradient(90deg, black 0%, white 50%, black 100%) 1;
+    padding-bottom: 0.8rem;
+}
+
+main section h2 {
+    text-shadow: var(--title-shadow);
+    font-size: 1.2rem;
+}
+
+main section figure {
+    margin: 0 0 0.1rem 0;
+    position: relative;
+}
+
+main section figure img {
+    width: 100%;
+}
+
+.imgOpacity {
+    filter: opacity(50%);
+}
+
+main section figure figcaption {
+    font-size: 2.5vw;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    translate: -50%;
+    text-align: center;
+    background-color: white;
+    padding: 0.2rem 0.5rem;
+}
+
+/*block section style*/
+
+main section > div {
+    display: flex;
+    gap: 1.5vw;
+}
+
+.leftBoxRow {
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    gap: 1.5vw;
+}
+
+.rightBoxRow {
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    gap: 1.5vw;
+}
+
+.outerBox {
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 47.75vw; /*calc 50vw - 1.5vw body padding - 1.5 main div gap : 2*/
+    box-sizing: border-box;
+    display: flex;
+    border: 2px solid black;
+    border-radius: 25%;
+}
+
+.innerBox {
+    background-color: white;
+    width: 75%;
+    height: 75%;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+}
+
+.innerBox > div {
+    margin: auto;
+    font-family: "Jaini", sans-serif;
+    font-size: 15vw;
+}
+
+/*media query time*/
+
